@@ -9,11 +9,14 @@ import productRoute from "./routes/productRoute.js";
 import cors from "cors";
 import formidable from "express-formidable";
 import path from "path";
+import {fileURLToPath } from 'url';
 //configure
 dotenv.config();
 //Database config
 connectDB();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname= path.dirname(__filename);
 //rest object
 const app = express();
 
