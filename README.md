@@ -8,22 +8,24 @@ If you wish to run it on local environment then go ahead with the following proc
 Clone the project
 
 ```bash
-  git clone https://github.com/Saquib1973/Ecommerce.git
+  git clone https://github.com/Saquib1973/Ecommerce
 ```
 
 Go to the project directory
 
 ```bash
   cd Ecommerce
-  cd client
 ```
 
-Now open this in VsCode or any Editor of choice .Then in terminal install all the dependencies.
+Now open this in VsCode or any Editor of choice .Then in terminal install all the dependencies in the backend as well as client folder .
 
 ```bash
+  cd client
+  npm install
+  cd ..
+  cd backend
   npm install
 ```
-Also install the dependencies for backend as well by going into backend folder .
 After the installation of all the dependencies go ahead and run it on your local environment.
 
 ```bash
