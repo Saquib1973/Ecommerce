@@ -6,8 +6,8 @@
   "type": "module",
   "proxy": "http://localhost:8080",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
