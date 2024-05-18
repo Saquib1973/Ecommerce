@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
     console.log(data);
     try {
-      const res = await axios.post(`/api/v1/auth/register`, {
+      const res = await axios.post(`http://localhost:8080/api/v1/auth/register`, {
         name: data.name,
         email: data.email,
         address: data.address,
@@ -31,9 +31,8 @@ const Register = () => {
       if (res.data.success) {
         toast.custom((t) => (
           <div
-            className={`${
-              t.visible ? "animate-enter" : "animate-leave"
-            }  bg-green-200 border-2 border-green-300 p-2 rounded-xl `}
+            className={`${t.visible ? "animate-enter" : "animate-leave"
+              }  bg-green-200 border-2 border-green-300 p-2 rounded-xl `}
           >
             <div className="flex gap-2">
               <div className="text-green-500 p-2">{res.data.message}</div>
@@ -52,9 +51,8 @@ const Register = () => {
       } else {
         toast.custom((t) => (
           <div
-            className={`${
-              t.visible ? "animate-enter" : "animate-leave"
-            }  bg-green-200 border-2 border-green-300 p-2 rounded-xl `}
+            className={`${t.visible ? "animate-enter" : "animate-leave"
+              }  bg-green-200 border-2 border-green-300 p-2 rounded-xl `}
           >
             <div className="flex gap-2">
               <div className="text-green-500 p-2">{res.data.message}</div>
@@ -74,9 +72,8 @@ const Register = () => {
       console.log(error.response);
       toast.custom((t) => (
         <div
-          className={`${
-            t.visible ? "animate-enter" : "animate-leave"
-          }  bg-red-200 border-2 border-red-300 p-2 rounded-xl `}
+          className={`${t.visible ? "animate-enter" : "animate-leave"
+            }  bg-red-200 border-2 border-red-300 p-2 rounded-xl `}
         >
           <div className="flex gap-2">
             <div className="text-red-500 p-2">
